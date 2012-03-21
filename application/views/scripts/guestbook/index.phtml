@@ -1,0 +1,29 @@
+<h2>Database data</h2>
+
+<p><a href="<?php
+echo $this->url(
+        array(
+    'controller' => 'guestbook',
+    'action' => 'sign'
+        ), 'default', true)
+?>">Sign Our Guestbook</a></p>
+
+Guestbook Entries: <br />
+
+<?php
+//$test=araay();
+$test = $this->entries;
+var_dump($test);
+exit;
+foreach ($test as $k => $v):
+    ?>
+    <dl>
+        <dt><?php echo $this->escape($v->getId()) ?></dt>
+        <dt><?php echo $this->escape($v->getComment()) ?></dt>
+        <dt><?php echo $this->escape($v->getEmail()) ?></dt>
+        <dt><?php echo $this->escape($v->getComment()) ?></dt>  
+        <dt><?php echo $this->escape($v->getCreated()) ?></dt>
+<?php endforeach ?>
+</dl>
+
+
