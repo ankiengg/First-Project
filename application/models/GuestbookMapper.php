@@ -44,12 +44,12 @@ class Application_Model_GuestbookMapper {
         return $this->_dbTable;
     }
 
-    public function save(Application_Model_Guestbook $guestbook) {
-        $data = array(
-            'email' => $guestbook->getEmail(),
-            'comment' => $guestbook->getComment(),
-            'created' => date('Y-m-d H:i:s'),
-        );
+    //public function save(Application_Model_Guestbook $guestbook) {
+       // $data = array(
+          //  'email' => $guestbook->getEmail(),
+          //  'comment' => $guestbook->getComment(),
+           // 'created' => date('Y-m-d H:i:s'),
+       // );
 
         /* if (null === ($id = $guestbook->getId())) {
           //unset($data['id']);
