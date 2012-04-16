@@ -4,12 +4,12 @@
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
-require_once 'Zend/Controller/Action.php';
+//require_once 'Zend/Controller/Action.php';
 
 
     class LoginController extends Zend_Controller_Action
     {
-        public function getForm()
+       /* public function getForm()
         {
             // create form as above
            // $form=new Form_Login;
@@ -42,9 +42,9 @@ require_once 'Zend/Controller/Action.php';
             $values = $form->getValues();
             // now try and authenticate....
         }
-    
+    */
         
-           public function loginnwAction() {
+           public function loginAction() {
         $form = new Form_Login;
          var_dump($form);
             exit;
