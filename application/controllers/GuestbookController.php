@@ -37,19 +37,19 @@ class GuestbookController extends Zend_Controller_Action {
         } catch (Zend_Db_Adapter_Exception $e) {
             echo $e->getMessage();
         }
-        // $guestbook = new Application_Model_GuestbookMapper();
-        //  $this->view->entries = $guestbook->fetchAll();
+         $guestbook = new Application_Model_GuestbookMapper();
+         $this->view->entries = $guestbook->fetchAll();
         //$stmt = $db->query('SELECT * FROM guestbook');
 //$rows = $stmt->fetchAll();
         //$rows=$guestbook->fetchRow($guestbook->select()->where('id = ?', 2));
-        $stmt = $db->query('SELECT * FROM guestbook where id = 2 ');
+        //$stmt = $db->query('SELECT * FROM guestbook where id = 2 ');
 
-        $rows = $stmt->fetchAll();
+     //   $rows = $stmt->fetchAll();
 
 //var_dump($rows);
 //exit;
 //$rows=array();
-        $this->view->entries = $rows;
+       // $this->view->entries = $rows;
 //var_dump($rows);
 //exit;
         // $test=1;

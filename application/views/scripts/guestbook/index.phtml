@@ -18,11 +18,11 @@ exit;
 foreach ($test as $k => $v):
     ?>
     <dl>
-        <dt><?php echo $this->escape($v->getId()) ?></dt>
-        <dt><?php echo $this->escape($v->getComment()) ?></dt>
-        <dt><?php echo $this->escape($v->getEmail()) ?></dt>
-        <dt><?php echo $this->escape($v->getComment()) ?></dt>  
-        <dt><?php echo $this->escape($v->getCreated()) ?></dt>
+        <dt><?php echo $this->escape($v['id']); ?></dt>
+        <dt><?php //echo $this->escape($v->getComment()) ?></dt>
+        <dt><?php //echo $this->escape($v->getEmail()) ?></dt>
+        <dt><?php //echo $this->escape($v->getComment()) ?></dt>  
+        <dt><?php //echo $this->escape($v->getCreated()) ?></dt>
 <?php endforeach ?>
 </dl>
 

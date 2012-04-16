@@ -23,23 +23,22 @@ class Application_Model_GuestbookMapper {
     public function getDbTable() {
         if (null === $this->_dbTable) {
 
-            // $this->setDbTable('Application_Model_DbTable_Guestbook');
+            $this->setDbTable('Application_Model_DbTable_Guestbook');
 
-            $params = array
+           /* $params = array
                 (
                 'host' => 'localhost',
                 'username' => 'root',
                 'password' => '',
                 'dbname' => 'Data'
-            );
-
-            try {
+            );*/
+           /* try {
                 $db = Zend_Db::factory('PDO_MYSQL', $params);
                 $db->getConnection();
             } catch (Zend_Db_Adapter_Exception $e) {
                 echo $e->getMessage();
             }
-            $this->setDbTable($db);
+            $this->setDbTable($db);*/
         }
         return $this->_dbTable;
     }
