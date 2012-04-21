@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 
-class Form_Login extends Zend_Form {
+class Application_Form_Login extends Zend_Form {
 
     public function init() {
         $this->setAction($this->getView()->url(array(
@@ -17,13 +17,13 @@ class Form_Login extends Zend_Form {
         $username = $this->createElement('text', 'username');
         $username->addValidator('alnum')
                 ->addValidator('regex', false, array('/^[a-z]+/'))
-                ->addValidator('stringLength', false, array(6, 20))
+                ->addValidator('stringLength', false, array(6, 10))
                 ->setRequired(true)
                 ->addFilter('StringToLower');
 
         // Create and configure password element:
         $password = $this->createElement('password', 'password');
-        $password->addValidator('StringLength', false, array(6))
+        $password->addValidator('StringLength', false, array(6,10))
                 ->setRequired(true);
 
         // Add elements to form:
