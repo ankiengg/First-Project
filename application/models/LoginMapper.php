@@ -67,22 +67,6 @@ public function save(Application_Model_Login $login)
            $this->getDbTable()->update($userRequest, array('username = ?' => $username));
         }
         
-       /* $password = $userEntity->getPassword();
-        if (!empty($password)) {
-            $userRequest['Password'] = $userEntity->getPassword();
-        } else {
-            $userRequest['Password'] = '';
-        }
-        
-        
-        $response = $this->getDatasource()->UpdateUserAccount(array('user' => $userRequest));
-        
-        
-        $result = new StdClass;
-        $result->response = $response->UpdateUserAccountResult->Result;
-        $result->data = array();
-
-        return $result;*/
     }
     
     
