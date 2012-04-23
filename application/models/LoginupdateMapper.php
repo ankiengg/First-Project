@@ -5,7 +5,7 @@
  * and open the template in the editor.
  */
 
-class Application_Model_LoginMapper
+class Application_Model_LoginupdateMapper
 {
     protected $_dbTable;
  
@@ -29,41 +29,22 @@ class Application_Model_LoginMapper
         return $this->_dbTable;
     }
     
-public function save(Application_Model_Login $login)
-    {
-        $data = array(
-            'username'   => $login->getUsername(),
-            'password' => $login->getPassword(),
-            
-        );
- 
-        //if (null === ($username = $login->getUsername())) {
-            //unset($data['username']);
-        
-        if ($username=$login->getUsername()){
-            $this->getDbTable()->insert($data);
-        }
-       // } 
-        //else {
-           // var_dump($data);
-           // exit;            
-           // $this->getDbTable()->update($data, array('username = ?' => $username));
-       // }
-    }
+
+   
     
-      public function update(Application_Model_Login $userEntity) {
+      public function update(Application_Model_Loginupdate $userEntity) {
         $userRequest = array(
             'username'   => $userEntity->getUsername(),
             'password' => $userEntity->getPassword(),
         );
 
-        if (null===($username=$userEntity->getUsername())){
+        if (null===($username=$login->getUsername())){
             $this->getDbTable()->insert($userRequest);
         }
        // } 
         else {
-           // var_dump($userRequest);
-          // exit;            
+            var_dump($userRequest);
+           exit;            
            $this->getDbTable()->update($userRequest, array('username = ?' => $username));
         }
         

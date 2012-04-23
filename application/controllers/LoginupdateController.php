@@ -6,7 +6,7 @@
  */
 require_once 'Zend/Controller/Action.php';
 
-class LoginController extends Zend_Controller_Action {
+class LoginupdateController extends Zend_Controller_Action {
     /* public function getForm()
       {
       // create form as above
@@ -56,16 +56,16 @@ class LoginController extends Zend_Controller_Action {
         $this->view->form = $form;
     }
     */
-    
-   public function loginAction()
+   
+     public function loginupdateAction()
     {
         $request = $this->getRequest();
-        $form    = new Application_Form_Login();
+        $form    = new Application_Form_Loginupdate();
  
         if ($this->getRequest()->isPost()) {
             if ($form->isValid($request->getPost())) {
-                $comment = new Application_Model_Login($form->getValues());
-                $mapper  = new Application_Model_LoginMapper();
+                $comment = new Application_Model_Loginupdate($form->getValues());
+                $mapper  = new Application_Model_LoginupdateMapper();
                 $mapper->save($comment);
                 return $this->_helper->redirector('login');
             }
@@ -74,23 +74,6 @@ class LoginController extends Zend_Controller_Action {
         $this->view->form = $form;
     }
 
-    
-         public function updateAction()
-    {
-        $request = $this->getRequest();
-        $form    = new Application_Form_Loginupdate();
- 
-        if ($this->getRequest()->isPost()) {
-            if ($form->isValid($request->getPost())) {
-                $comment = new Application_Model_Login($form->getValues());
-                $mapper  = new Application_Model_LoginMapper();
-                $mapper->update($comment);
-                return $this->_helper->redirector('login');
-            }
-        }
- 
-        $this->view->form = $form;
-    }
     
     
 }
